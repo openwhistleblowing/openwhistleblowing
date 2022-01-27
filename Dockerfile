@@ -12,6 +12,7 @@ RUN yum -y install maven rpm-build
 # creating the rpm
 COPY pom.xml /root
 COPY src /root/src
+COPY AUTHORS LICENSE /root/
 RUN cd /root; mvn package
 
 ############################################
